@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Homepage from "../pages/homepage";
-import About from "../pages/about";
+import Homepage from "../pages/Homepage";
+import About from "../pages/About";
 
 
 function AppRouter() {
