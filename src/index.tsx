@@ -3,26 +3,29 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import { configureStore } from "@reduxjs/toolkit";
-import { Provider } from "react-redux";
-import userReducer from "./features/User";
+import { AuthContextProvider } from "./context/AuthContext";
+// import { configureStore } from "@reduxjs/toolkit";
+// import { Provider } from "react-redux";
+// import userReducer from "./features/User";
 
-const store = configureStore({
-  reducer: {
-    user: userReducer,
-  },
-});
+// const store = configureStore({
+//   reducer: {
+//     user: userReducer,
+//   },
+// });
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
+    <AuthContextProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </Provider>
+      </AuthContextProvider>
+    {/* </Provider> */}
   </React.StrictMode>
 );
 
