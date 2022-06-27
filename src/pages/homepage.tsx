@@ -14,13 +14,13 @@ function Homepage () {
     <div className="App">
       <div className="App-header">
         <h1>
-          <GiFarmer font-size="120px"/>
+          <GiFarmer fontSize="120px"/>
           <hr />
           Welcome To Farm Management App
           <hr />
           Care About Your Animals
           <hr />
-          <GiCow font-size="120px"/>
+          <GiCow fontSize="120px"/>
         </h1>
         <button 
         className="App-button"
