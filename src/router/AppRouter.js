@@ -1,8 +1,11 @@
 import React,  {useContext} from "react";
 import { Routes, Route, Navigate} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+
 import Homepage from "../pages/Homepage";
 import About from "../pages/About";
 import Login from "../pages/Login/Login";
+
 import { AuthContext } from "../context/AuthContext";
 
 function AppRouter() {
@@ -14,6 +17,7 @@ function AppRouter() {
   };
 
   return (
+    <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Homepage /> } />
@@ -24,6 +28,7 @@ function AppRouter() {
               } />
         {/* <Route path="/auth" element={<SignUp />} /> */}
       </Routes>
+      </BrowserRouter>
   
   );
 }
