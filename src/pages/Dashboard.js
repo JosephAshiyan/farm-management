@@ -22,15 +22,19 @@ function Dashboard() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          textAlign: "center",
+        //   justifyContent: "center",
           fontSize: "1.3vw",
           color: "white",
         }}
       >
-        <h1>
-          <GiCow fontSize="8vw" />
+        <h1 >
+          <GiCow fontSize="8vw"/>
           <hr />
           Welcome To Farm Management Dashboard
+          <hr />
+          <hr />
+          Select A Barn
           <hr />
         </h1>
       </Box>
