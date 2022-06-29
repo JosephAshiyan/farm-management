@@ -48,13 +48,20 @@ export default function BarnCard() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
-  const barnImage = "https://media.sciencephoto.com/image/c0125485/800wm";
-  const barnTitle = "Beef Cattle Barn";
-  const barnNotes = "Some imformation about barn";
-  const healthStatus = "Healthy: 40, Sick: 2";
-  const numberOfAnimals = 42;
-  const equipment = "Sufficient"
+const barn = {
+  barnImage: "https://media.sciencephoto.com/image/c0125485/800wm",
+  barnTitle: "Beef Cattle Barn",
+  barnNotes: "Some imformation about barn",
+  healthStatus: "Healthy: 40, Sick: 2",
+  numberOfAnimals: 42,
+  equipment: "Sufficient",
+}
+// const barnImage= "https://media.sciencephoto.com/image/c0125485/800wm";
+// const barnTitle = "Beef Cattle Barn";
+// const barnNotes = "Some imformation about barn";
+// const healthStatus = "Healthy: 40, Sick: 2";
+// const numberOfAnimals = 42;
+// const equipment = "Sufficient"
 
 
   return (
@@ -70,18 +77,18 @@ export default function BarnCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title= {barnTitle}
+        title= {barn.barnTitle}
         subheader={Date.now}
       />
       <CardMedia
         component="img"
         height="194"
-        image={barnImage}
+        image={barn.barnImage}
         alt="Barn Image"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive {barnTitle} is a perfect stable.
+          This impressive {barn.barnTitle} is a perfect stable.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -102,11 +109,13 @@ export default function BarnCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph style={{textAlign: "center"}}>Barn Notes</Typography>
-          <Typography paragraph>{barnNotes}</Typography>
-          <Typography paragraph>Health Status: {healthStatus}</Typography>
-          <Typography paragraph>Number Of Animals: {numberOfAnimals}</Typography>
-          <Typography>Equipment: {equipment}</Typography>
+          <Typography paragraph style={{textAlign: "center"}}>
+            <h4>Barn Notes</h4> 
+            </Typography>
+          <Typography paragraph>{barn.barnNotes}</Typography>
+          <Typography paragraph>Health Status: {barn.healthStatus}</Typography>
+          <Typography paragraph>Number Of Animals: {barn.numberOfAnimals}</Typography>
+          <Typography>Equipment: {barn.equipment}</Typography>
         </CardContent>
       </Collapse>
     </Card>
