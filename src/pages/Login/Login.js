@@ -10,7 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const navitage = useNavigate()
+  const navigate = useNavigate()
 
   const {dispatch} = useContext(AuthContext)
 
@@ -22,7 +22,7 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         dispatch({type:"LOGIN", payload:user})
-        navitage("/")
+        navigate("/dashboard")
       })
       .catch((error) => {
         setError(true);
@@ -42,7 +42,11 @@ const Login = () => {
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button 
+        type="submit"
+        >
+          Login
+        </button>
         {error && <span>Wrong email or password!</span>}
       </form>
     </div>

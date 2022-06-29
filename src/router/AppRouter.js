@@ -8,6 +8,7 @@ import Homepage from "../pages/Homepage";
 import About from "../pages/About";
 import Login from "../pages/Login/Login";
 import BeefPage from "../pages/Barns/BeefCattle/BeefPage";
+import Dashboard from "../pages/Dashboard";
 
 
 
@@ -27,6 +28,7 @@ function AppRouter() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Homepage /> } />
         <Route path="/beefPage" element={<BeefPage /> } />
+        <Route path="/dashboard" element={<Dashboard /> } />
         <Route path="about" element={
                 <RequireAuth>
                   <About />
