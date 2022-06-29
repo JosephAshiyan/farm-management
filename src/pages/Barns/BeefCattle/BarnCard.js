@@ -8,11 +8,12 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
+import Divider from "@mui/material/Divider";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
-import AgricultureIcon from '@mui/icons-material/Agriculture';
+import AgricultureIcon from "@mui/icons-material/Agriculture";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
@@ -36,6 +37,9 @@ const useStyles = makeStyles({
     "&:hover": {
       boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
     },
+    divider: {
+      margin: `${makeStyles.themeSpacing * 3}px`
+    },
   },
 });
 
@@ -48,21 +52,21 @@ export default function BarnCard() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-const barn = {
-  barnImage: "https://cdn.pixabay.com/photo/2018/07/06/23/30/cows-3521371_1280.jpg",
-  barnTitle: "Beef Cattle Barn",
-  barnNotes: "Some imformation about barn",
-  healthStatus: "Healthy: 40, Sick: 2",
-  numberOfAnimals: 42,
-  equipment: "Sufficient",
-}
-// const barnImage= "https://media.sciencephoto.com/image/c0125485/800wm";
-// const barnTitle = "Beef Cattle Barn";
-// const barnNotes = "Some imformation about barn";
-// const healthStatus = "Healthy: 40, Sick: 2";
-// const numberOfAnimals = 42;
-// const equipment = "Sufficient"
-
+  const barn = {
+    barnImage:
+      "https://cdn.pixabay.com/photo/2018/07/06/23/30/cows-3521371_1280.jpg",
+    barnTitle: "Beef Cattle Barn",
+    barnNotes: "Some imformation about barn",
+    healthStatus: "Healthy: 40, Sick: 2",
+    numberOfAnimals: 42,
+    equipment: "Sufficient",
+  };
+  // const barnImage= "https://media.sciencephoto.com/image/c0125485/800wm";
+  // const barnTitle = "Beef Cattle Barn";
+  // const barnNotes = "Some imformation about barn";
+  // const healthStatus = "Healthy: 40, Sick: 2";
+  // const numberOfAnimals = 42;
+  // const equipment = "Sufficient"
 
   return (
     <Card sx={{ maxWidth: 345 }} className={classes.card}>
@@ -77,7 +81,7 @@ const barn = {
             <MoreVertIcon />
           </IconButton>
         }
-        title= {barn.barnTitle}
+        title={barn.barnTitle}
         subheader={Date.now}
       />
       <CardMedia
@@ -109,12 +113,14 @@ const barn = {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph style={{textAlign: "center"}}>
-            <h4>Barn Notes</h4> 
-            </Typography>
+        <Divider className={classes.divider} light />
+            <h4 style={{ textAlign: "center" }}>Barn Notes</h4>
+          <Divider className={classes.divider} light />
           <Typography paragraph>{barn.barnNotes}</Typography>
           <Typography paragraph>Health Status: {barn.healthStatus}</Typography>
-          <Typography paragraph>Number Of Animals: {barn.numberOfAnimals}</Typography>
+          <Typography paragraph>
+            Number Of Animals: {barn.numberOfAnimals}
+          </Typography>
           <Typography>Equipment: {barn.equipment}</Typography>
         </CardContent>
       </Collapse>

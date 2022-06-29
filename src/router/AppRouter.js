@@ -10,6 +10,8 @@ import Login from "../pages/Login/Login";
 import BeefPage from "../pages/Barns/BeefCattle/BeefPage";
 
 
+
+
 function AppRouter() {
 
   const {currentUser} = useContext(AuthContext)
@@ -20,6 +22,7 @@ function AppRouter() {
 
   return (
     <BrowserRouter>
+  
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Homepage /> } />
@@ -31,6 +34,7 @@ function AppRouter() {
               } />
         {/* <Route path="/auth" element={<SignUp />} /> */}
       </Routes>
+
       </BrowserRouter>
   
   );
