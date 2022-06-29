@@ -1,5 +1,6 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/system";
 import { makeStyles } from "@mui/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -11,7 +12,6 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import AgricultureIcon from '@mui/icons-material/Agriculture';
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -49,7 +49,7 @@ export default function BarnCard() {
     setExpanded(!expanded);
   };
 const barn = {
-  barnImage: "https://media.sciencephoto.com/image/c0125485/800wm",
+  barnImage: "https://cdn.pixabay.com/photo/2018/07/06/23/30/cows-3521371_1280.jpg",
   barnTitle: "Beef Cattle Barn",
   barnNotes: "Some imformation about barn",
   healthStatus: "Healthy: 40, Sick: 2",
@@ -92,9 +92,9 @@ const barn = {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        {/* <IconButton aria-label="add to favorites">
           <FavoriteIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton aria-label="share">
           <AgricultureIcon />
         </IconButton>
