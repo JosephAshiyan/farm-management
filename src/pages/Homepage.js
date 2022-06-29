@@ -1,15 +1,21 @@
 import React from 'react'
-import { Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "../App.css";
 
 import { GiFarmer, GiCow } from "react-icons/gi";
 
-function handleClick (){
-  return <Navigate to="/login" replace={true} />
-}
+
+
 
 function Homepage () {
+
+  const navigate = useNavigate();
+  const navigateToLogin = () => {
+    // 👇️ navigate to /contacts
+    navigate('/login');
+  };
+
   return (
     <div className="App">
       <div className="App-header">
@@ -23,16 +29,11 @@ function Homepage () {
           <GiCow fontSize="120px"/>
         </h1>
         <button 
-        component= {Navigate}
-        to="/login"
         className="App-button"
-        // onClick={handleClick}
+        onClick={navigateToLogin}
         >
           Let's Start
         </button>
-        {/* <button>
-        <Navigate to="/login" replace={true}> Let's Start</Navigate>
-        </button> */}
       </div>
     </div>
   )
