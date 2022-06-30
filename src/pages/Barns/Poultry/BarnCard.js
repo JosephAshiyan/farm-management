@@ -54,19 +54,13 @@ export default function BarnCard() {
   };
   const barn = {
     barnImage:
-      "https://cdn.pixabay.com/photo/2018/07/06/23/30/cows-3521371_1280.jpg",
+      "https://www.bentoli.com/wp-content/uploads/2017/12/poultry-industry.jpg",
     barnTitle: "Poultry",
     barnNotes: "Some imformation about poultry",
     healthStatus: "Healthy: 220, Sick: 22",
     numberOfAnimals: 242,
     equipment: "Sufficient",
   };
-  // const barnImage= "https://media.sciencephoto.com/image/c0125485/800wm";
-  // const barnTitle = "Beef Cattle Barn";
-  // const barnNotes = "Some imformation about barn";
-  // const healthStatus = "Healthy: 40, Sick: 2";
-  // const numberOfAnimals = 42;
-  // const equipment = "Sufficient"
 
   return (
     <Card sx={{ maxWidth: 345 }} className={classes.card}>

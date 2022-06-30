@@ -34,6 +34,9 @@ function Dashboard() {
             break;
     }
   }
+  function handleHomePage (){
+          return navigate("/")
+  }
 
 
   const barnsList= {
@@ -61,7 +64,10 @@ function Dashboard() {
         }}
       >
         <h1>
-          <GiCow fontSize="8vw" />
+          <GiCow 
+          fontSize="8vw"
+          onClick={handleHomePage}
+          style={{ cursor: "pointer" }}></GiCow>
           <hr />
           Welcome To Farm Management Dashboard
           <hr />

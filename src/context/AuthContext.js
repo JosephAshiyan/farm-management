@@ -2,7 +2,7 @@ import { createContext, useEffect, useReducer } from "react";
 import AuthReducer from "./AuthReducer";
 
 const INITIAL_STATE = {
-  currentUser: JSON.parse(localStorage.getItem("user")) || null, // Db den alınmalı
+  currentUser: JSON.parse(localStorage.getItem("user")) || null, // Db'den alınmalı Local'den değil.
 };
 
 export const AuthContext = createContext(INITIAL_STATE);
