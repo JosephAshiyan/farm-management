@@ -12,6 +12,7 @@ import DairyPage from "../pages/Barns/DairyCattle/DairyPage";
 import GoatPage from "../pages/Barns/Goat/GoatPage";
 import SheepPage from "../pages/Barns/Sheep/SheepPage";
 import HorsePage from "../pages/Barns/Horse/HorsePage";
+import PoultryPage from "../pages/Barns/Poultry/PoultryPage";
 import Dashboard from "../pages/Dashboard";
 
 
@@ -29,12 +30,13 @@ function AppRouter() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Homepage /> } />
+        <Route path="/dashboard" element={<Dashboard /> } />
         <Route path="/beefPage" element={<BeefPage /> } />
         <Route path="/dairyPage" element={<DairyPage /> } />
         <Route path="/goatPage" element={<GoatPage /> } />
         <Route path="/sheepPage" element={<SheepPage /> } />
         <Route path="/horsePage" element={<HorsePage /> } />
-        <Route path="/dashboard" element={<Dashboard /> } />
+        <Route path="/poultryPage" element={<PoultryPage /> } />
         <Route path="about" element={
                 <RequireAuth>
                   <About />
