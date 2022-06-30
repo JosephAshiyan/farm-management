@@ -1,11 +1,11 @@
 import React from 'react'
 import BarnCard from "./BarnCard"
 
-function BeefPage() {
+function HorsePage() {
   return (
     <div>
         <div>
-            <h1 style={{textAlign: "center"}}> Here is your Beef Cattle Barns </h1>
+            <h1 style={{textAlign: "center"}}> Here is your Horse Stable </h1>
         </div>
      <hr/>
      <br/>
@@ -14,4 +14,4 @@ function BeefPage() {
   )
 }
 
-export default BeefPage
+export default HorsePage

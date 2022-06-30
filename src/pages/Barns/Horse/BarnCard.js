@@ -54,11 +54,11 @@ export default function BarnCard() {
   };
   const barn = {
     barnImage:
-      "https://cdn.pixabay.com/photo/2018/07/06/23/30/cows-3521371_1280.jpg",
-    barnTitle: "Beef Cattle Barn",
-    barnNotes: "Some imformation about barn",
-    healthStatus: "Healthy: 40, Sick: 2",
-    numberOfAnimals: 42,
+      "https://i.pinimg.com/originals/6d/b4/d7/6db4d71fc937a127226eefcde1ad2b54.jpg",
+    barnTitle: "Horse Stable",
+    barnNotes: "Some imformation about stable",
+    healthStatus: "Healthy: 43, Sick: 2",
+    numberOfAnimals: 45,
     equipment: "Sufficient",
   };
   // const barnImage= "https://media.sciencephoto.com/image/c0125485/800wm";
@@ -73,7 +73,7 @@ export default function BarnCard() {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            BC
+            HS
           </Avatar>
         }
         action={
@@ -92,7 +92,7 @@ export default function BarnCard() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive {barn.barnTitle} is a perfect stable.
+          This impressive {barn.barnTitle} is a perfect barn.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

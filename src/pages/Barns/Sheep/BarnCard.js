@@ -54,11 +54,11 @@ export default function BarnCard() {
   };
   const barn = {
     barnImage:
-      "https://cdn.pixabay.com/photo/2018/07/06/23/30/cows-3521371_1280.jpg",
-    barnTitle: "Beef Cattle Barn",
-    barnNotes: "Some imformation about barn",
-    healthStatus: "Healthy: 40, Sick: 2",
-    numberOfAnimals: 42,
+      "https://www.raisingsheep.net/wp-content/uploads/2020/08/sheep-housing.jpg",
+    barnTitle: "Sheep Barn",
+    barnNotes: "Some imformation about sheep barn",
+    healthStatus: "Healthy: 35, Sick: 4",
+    numberOfAnimals: 39,
     equipment: "Sufficient",
   };
   // const barnImage= "https://media.sciencephoto.com/image/c0125485/800wm";
@@ -73,7 +73,7 @@ export default function BarnCard() {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            BC
+            SB
           </Avatar>
         }
         action={
