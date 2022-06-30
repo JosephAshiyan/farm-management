@@ -1,5 +1,5 @@
 import React from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
 
 import "../App.css";
@@ -7,11 +7,43 @@ import "../App.css";
 import { GiCow } from "react-icons/gi";
 
 function Dashboard() {
-  //   const navigate = useNavigate();
-  //   const navigateToLogin = () => {
-  //     // 👇️ navigate to /contacts
-  //     navigate('/login');
-  //   };
+  const navigate = useNavigate();
+
+  function handleClick (key) {
+    switch (key) {
+        case "navigateToBeefCattle":
+            navigate("/beefPage");
+            break;
+        case "navigateToDairyCattle":
+            navigate("/dairyPage");
+            break;
+        case "navigateToGoatBarn":
+            navigate("/goatPage");
+            break;
+        case "navigateToSheepBarn":
+            navigate("/sheepPage");
+            break;
+        case "navigateToHorseStable":
+            navigate("/horsePage");
+            break;
+        case "navigateToPoultry":
+            navigate("/poultryPage");
+            break;
+        default:
+            navigate("/dashboard");
+            break;
+    }
+  }
+
+
+  const barnsList= {
+   navigateToBeefCattle: "Beef Cattle Barn" ,
+   navigateToDairyCattle: "Dairy Cattle Barn",
+   navigateToGoatBarn: "Goat Barn",
+   navigateToSheepBarn: "Sheep Barn",
+   navigateToHorseStable: "Horse Stable",
+   navigateToPoultry: "Poultry",
+  }
 
   return (
     <div>
@@ -23,13 +55,13 @@ function Dashboard() {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-        //   justifyContent: "center",
+          //   justifyContent: "center",
           fontSize: "1.3vw",
           color: "white",
         }}
       >
-        <h1 >
-          <GiCow fontSize="8vw"/>
+        <h1>
+          <GiCow fontSize="8vw" />
           <hr />
           Welcome To Farm Management Dashboard
           <hr />
@@ -37,6 +69,22 @@ function Dashboard() {
           Select A Barn
           <hr />
         </h1>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+            {Object.entries(barnsList).map(([key, value]) =>(
+                <ul
+                key= {key} 
+                onClick={()=>handleClick(key)}
+                style={{ cursor: "pointer" }}>
+                    {value}
+                    </ul>
+            ))}
+        </div>
       </Box>
     </div>
   );
